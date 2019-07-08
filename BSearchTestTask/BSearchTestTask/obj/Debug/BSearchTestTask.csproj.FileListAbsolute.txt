@@ -1,0 +1,7 @@
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\bin\Debug\BSearchTestTask.exe.config
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\bin\Debug\BSearchTestTask.exe
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\bin\Debug\BSearchTestTask.pdb
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.csprojAssemblyReference.cache
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.csproj.CoreCompileInputs.cache
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.exe
+J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.pdb
