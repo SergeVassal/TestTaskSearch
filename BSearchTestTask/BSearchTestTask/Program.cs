@@ -10,50 +10,76 @@ namespace BSearchTestTask
     {
         private static int BSearch(int[] sortedArray,int x)
         {
-            int minArrayIndex = 0;
-            int maxArrayIndex = sortedArray.Length - 1;            
-            int result=-1;
+            int result = -1;
 
-            while (minArrayIndex <= maxArrayIndex)
+            try
             {
-                int midArrayIndex = (minArrayIndex + maxArrayIndex) / 2;
-                
-                if (x == sortedArray[midArrayIndex])
+                int minArrayIndex = 0;
+                int maxArrayIndex = sortedArray.Length - 1;                
+
+                if (sortedArray[maxArrayIndex] < x)
                 {
-                    result = midArrayIndex + 1;
-                    break;
+                    return result;
                 }
-                else if (midArrayIndex == maxArrayIndex)
+
+                while (minArrayIndex <= maxArrayIndex)
                 {
-                    if (sortedArray[midArrayIndex] == x)
+                    int midArrayIndex = (minArrayIndex + maxArrayIndex) / 2;
+                    Console.WriteLine("Counted middle Min array index {0}", minArrayIndex);
+                    Console.WriteLine("Counted middle Mid array index {0}", midArrayIndex);
+                    Console.WriteLine("Counted middle Max array index {0}", maxArrayIndex);
+
+                    if (x == sortedArray[midArrayIndex])
                     {
-                        result = midArrayIndex + 1;                        
+                        result = midArrayIndex + 1;
+                        break;
                     }
-                    else if(x<sortedArray[midArrayIndex])
+                    else if (midArrayIndex == minArrayIndex)
                     {
-                        result = midArrayIndex;
+                        if (x < sortedArray[midArrayIndex])
+                        {
+                            result = midArrayIndex;
+                        }
+                        else if (x > sortedArray[midArrayIndex])
+                        {
+                            result = midArrayIndex + 1;
+                        }
+                        break;
                     }
-                    break;
+                    else if (x < sortedArray[midArrayIndex])
+                    {
+                        maxArrayIndex = midArrayIndex - 1;
+                        Console.WriteLine("Max array index {0}", maxArrayIndex);
+                    }
+                    else if (x > sortedArray[midArrayIndex])
+                    {
+                        minArrayIndex = midArrayIndex + 1;
+                        Console.WriteLine("Min array index {0}", minArrayIndex);
+                    }
                 }
-                else if (x < sortedArray[midArrayIndex])
-                {
-                    maxArrayIndex = midArrayIndex - 1;
-                }
-                else if (x > sortedArray[midArrayIndex])
-                {
-                    minArrayIndex = midArrayIndex + 1;
-                }                
-            }           
-           
-            return result;
+
+                return result;
+            }
+            catch(System.IndexOutOfRangeException e)
+            {
+                Console.WriteLine("IndexOutOfRangeException");
+                return result;
+            }            
+            
         }
 
         static void Main(string[] args)
         {
-            int[] myArray = { 104,102,103,34,8,2,90 };
+            int[] myArray = {  };
             Array.Sort(myArray);
-            int result = BSearch(myArray, 200);
 
+            for (int i=0;i<myArray.Length;i++)
+            {
+                Console.WriteLine("{0}  {1}",i,myArray[i]);
+            }
+
+            int result = BSearch(myArray, 4);
+            
             Console.WriteLine(result);
             Console.ReadKey();
             
