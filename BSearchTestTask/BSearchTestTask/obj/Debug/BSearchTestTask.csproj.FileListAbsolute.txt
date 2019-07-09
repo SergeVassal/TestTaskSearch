@@ -5,3 +5,10 @@ J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSe
 J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.csproj.CoreCompileInputs.cache
 J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.exe
 J:\7lions\Career\ITAcademyTestTask\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.pdb
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\bin\Debug\BSearchTestTask.exe.config
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\bin\Debug\BSearchTestTask.exe
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\bin\Debug\BSearchTestTask.pdb
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.csprojAssemblyReference.cache
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.csproj.CoreCompileInputs.cache
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.exe
+I:\7lions\Career\ITAcademy\TestTaskSearch\BSearchTestTask\BSearchTestTask\obj\Debug\BSearchTestTask.pdb

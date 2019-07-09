@@ -1,16 +1,41 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BSearchTestTask
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            TestBSearchFunc();            
+        }
+
+        private static void TestBSearchFunc()
+        {
+            int[] myArray = {-20,-100,2,54,4,90 };
+            int x = 8;
+
+            Array.Sort(myArray);
+            int result = BSearch(myArray, x);
+
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine("{0}   {1}", i, myArray[i]);                
+            }            
+
+            if (result != -1)
+            {
+                Console.WriteLine("\nArray index after integer {0}: {1}",x,result);
+            }
+            else
+            {
+                Console.WriteLine("There's no such array index");
+            }
+            Console.ReadKey();
+        }
+
         private static int BSearch(int[] sortedArray,int x)
         {
-            int result = -1;
+            int result = -1;            
 
             try
             {
@@ -24,23 +49,20 @@ namespace BSearchTestTask
 
                 while (minArrayIndex <= maxArrayIndex)
                 {
-                    int midArrayIndex = (minArrayIndex + maxArrayIndex) / 2;
-                    Console.WriteLine("Counted middle Min array index {0}", minArrayIndex);
-                    Console.WriteLine("Counted middle Mid array index {0}", midArrayIndex);
-                    Console.WriteLine("Counted middle Max array index {0}", maxArrayIndex);
+                    int midArrayIndex = (minArrayIndex + maxArrayIndex) / 2;                    
 
-                    if (x == sortedArray[midArrayIndex])
+                    if (x == sortedArray[midArrayIndex] && midArrayIndex+1<sortedArray.Length)
                     {
                         result = midArrayIndex + 1;
                         break;
                     }
                     else if (midArrayIndex == minArrayIndex)
                     {
-                        if (x < sortedArray[midArrayIndex])
+                        if (x < sortedArray[midArrayIndex] )
                         {
                             result = midArrayIndex;
                         }
-                        else if (x > sortedArray[midArrayIndex])
+                        else if (x > sortedArray[midArrayIndex] && x< sortedArray[maxArrayIndex])
                         {
                             result = midArrayIndex + 1;
                         }
@@ -48,41 +70,20 @@ namespace BSearchTestTask
                     }
                     else if (x < sortedArray[midArrayIndex])
                     {
-                        maxArrayIndex = midArrayIndex - 1;
-                        Console.WriteLine("Max array index {0}", maxArrayIndex);
+                        maxArrayIndex = midArrayIndex;                        
                     }
                     else if (x > sortedArray[midArrayIndex])
                     {
-                        minArrayIndex = midArrayIndex + 1;
-                        Console.WriteLine("Min array index {0}", minArrayIndex);
+                        minArrayIndex = midArrayIndex;                        
                     }
                 }
-
                 return result;
             }
-            catch(System.IndexOutOfRangeException e)
+            catch(IndexOutOfRangeException e)
             {
                 Console.WriteLine("IndexOutOfRangeException");
                 return result;
-            }            
-            
-        }
-
-        static void Main(string[] args)
-        {
-            int[] myArray = {  };
-            Array.Sort(myArray);
-
-            for (int i=0;i<myArray.Length;i++)
-            {
-                Console.WriteLine("{0}  {1}",i,myArray[i]);
-            }
-
-            int result = BSearch(myArray, 4);
-            
-            Console.WriteLine(result);
-            Console.ReadKey();
-            
-        }
+            }  
+        }        
     }
 }
